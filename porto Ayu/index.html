@@ -1,0 +1,1826 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Little Steps by Miss Ayu | Guru Privat Anak Jakarta Utara</title>
+  <meta name="description" content="Miss Ayu Khristina – Guru privat anak berpengalaman 10+ tahun, tersertifikasi Montessori. Home visit area Jakarta Utara (Cilincing & sekitarnya). Hubungi via WhatsApp sekarang!" />
+  <meta property="og:title" content="Little Steps by Miss Ayu | Guru Privat Anak" />
+  <meta property="og:description" content="Membantu si kecil tumbuh dan berkembang, satu langkah demi satu langkah. 10+ tahun pengalaman, sertifikasi Montessori." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,700&family=Pacifico&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ===========================
+       DESIGN TOKENS & RESET
+    =========================== */
+    :root {
+      --pink:        #F9A8C9;
+      --pink-light:  #FDE8F2;
+      --pink-deep:   #E8749F;
+      --cream:       #FFF8F0;
+      --cream-warm:  #FAF0E0;
+      --blue:        #A8D8EA;
+      --blue-light:  #E4F4FB;
+      --blue-deep:   #6BBAD6;
+      --sage:        #B5D5C5;
+      --sage-light:  #E8F5EF;
+      --sage-deep:   #7BB89A;
+      --yellow:      #FFE08A;
+      --yellow-deep: #F5C842;
+      --peach:       #FFD4B2;
+      --text-dark:   #4A3728;
+      --text-mid:    #7A5C4A;
+      --text-soft:   #A68C7A;
+      --white:       #FFFFFF;
+      --shadow-sm:   0 2px 12px rgba(232,116,159,0.10);
+      --shadow-md:   0 6px 32px rgba(232,116,159,0.18);
+      --shadow-lg:   0 12px 48px rgba(232,116,159,0.22);
+      --radius-sm:   12px;
+      --radius-md:   20px;
+      --radius-lg:   32px;
+      --radius-xl:   48px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Quicksand', sans-serif; background-color: var(--cream); color: var(--text-dark); overflow-x: hidden; }
+    img { display: block; width: 100%; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ===========================
+       SVG ICON SYSTEM
+    =========================== */
+    .icon-svg {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .icon-svg svg { display: block; }
+
+    /* ===========================
+       DECORATIVE SHAPES (CSS-only)
+    =========================== */
+    .deco-shape {
+      position: absolute;
+      pointer-events: none;
+      user-select: none;
+      animation: floatDeco 6s ease-in-out infinite;
+    }
+
+    @keyframes floatDeco {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50%       { transform: translateY(-14px) rotate(10deg); }
+    }
+
+    /* ===========================
+       NAV
+    =========================== */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(255,248,240,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 2px solid var(--pink-light);
+      padding: 0.75rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+    }
+
+    .nav-brand {
+      font-family: 'Pacifico', cursive;
+      font-size: 1.15rem;
+      color: var(--pink-deep);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .nav-brand-icon {
+      width: 28px; height: 28px;
+      background: linear-gradient(135deg, var(--pink), var(--pink-deep));
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-mid);
+      padding: 0.3rem 0.7rem;
+      border-radius: var(--radius-sm);
+      transition: all 0.2s;
+    }
+
+    .nav-links a:hover { background: var(--pink-light); color: var(--pink-deep); }
+
+    .nav-wa {
+      background: linear-gradient(135deg, #25D366, #128C7E) !important;
+      color: white !important;
+      border-radius: 50px !important;
+      padding: 0.35rem 1rem !important;
+      font-weight: 800 !important;
+      box-shadow: 0 4px 14px rgba(37,211,102,0.35);
+      display: flex !important;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .nav-wa:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37,211,102,0.45) !important;
+    }
+
+    /* ===========================
+       HERO
+    =========================== */
+    #hero {
+      min-height: 100vh;
+      padding-top: 76px;
+      background: linear-gradient(160deg, var(--pink-light) 0%, var(--cream) 45%, var(--blue-light) 100%);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-bg-pattern {
+      position: absolute;
+      inset: 0;
+      background-image: url('bg_pattern.jpg');
+      background-size: 320px;
+      opacity: 0.055;
+    }
+
+    /* CSS decorative blobs */
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      filter: blur(60px);
+      opacity: 0.25;
+    }
+    .blob-1 { width: 420px; height: 420px; background: var(--pink); top: -100px; left: -80px; }
+    .blob-2 { width: 350px; height: 350px; background: var(--blue); bottom: -80px; right: -60px; }
+    .blob-3 { width: 280px; height: 280px; background: var(--sage); top: 40%; left: 60%; }
+
+    /* Deco SVG shapes */
+    .hero-deco { position: absolute; }
+    .hero-deco:nth-child(4) { top: 11%; left: 3.5%;  animation-delay: 0s; }
+    .hero-deco:nth-child(5) { top: 18%; right: 4%;   animation-delay: 0.8s; }
+    .hero-deco:nth-child(6) { bottom: 20%; left: 6%; animation-delay: 1.6s; }
+    .hero-deco:nth-child(7) { bottom: 14%; right: 3%; animation-delay: 0.4s; }
+    .hero-deco:nth-child(8) { top: 48%; left: 1.5%;  animation-delay: 2.2s; }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 2rem;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--white);
+      border: 2px solid var(--pink);
+      border-radius: 50px;
+      padding: 0.4rem 1.2rem;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--pink-deep);
+      box-shadow: var(--shadow-sm);
+      animation: fadeSlideDown 0.6s ease both;
+    }
+
+    @keyframes fadeSlideDown { from { opacity:0; transform:translateY(-16px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes fadeSlideUp   { from { opacity:0; transform:translateY(24px); }  to { opacity:1; transform:translateY(0); } }
+    @keyframes fadeIn        { from { opacity:0; } to { opacity:1; } }
+
+    .hero-title {
+      font-family: 'Pacifico', cursive;
+      font-size: clamp(2.4rem, 7vw, 4.2rem);
+      line-height: 1.15;
+      color: var(--pink-deep);
+      text-shadow: 3px 3px 0 rgba(232,116,159,0.12);
+      animation: fadeSlideDown 0.7s 0.15s ease both;
+    }
+
+    .hero-title .accent-blue { color: var(--blue-deep); }
+    .hero-title .accent-sage { color: var(--sage-deep); }
+
+    .hero-tagline {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      color: var(--text-mid);
+      font-weight: 600;
+      font-style: italic;
+      max-width: 520px;
+      line-height: 1.6;
+      animation: fadeSlideUp 0.7s 0.3s ease both;
+    }
+
+    .hero-image-wrap {
+      width: 100%;
+      max-width: 700px;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 4px solid var(--white);
+      animation: fadeIn 0.9s 0.4s ease both;
+      position: relative;
+    }
+
+    .hero-image-wrap img { object-fit: cover; }
+
+    .hero-stats {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      animation: fadeSlideUp 0.7s 0.5s ease both;
+    }
+
+    .stat-pill {
+      background: var(--white);
+      border-radius: 50px;
+      padding: 0.55rem 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--text-dark);
+      box-shadow: var(--shadow-sm);
+      border: 2px solid var(--pink-light);
+    }
+
+    .hero-cta-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      animation: fadeSlideUp 0.7s 0.6s ease both;
+    }
+
+    .btn-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      color: white;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 1.05rem;
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      box-shadow: 0 6px 28px rgba(37,211,102,0.4);
+      transition: all 0.25s;
+      cursor: pointer;
+    }
+
+    .btn-wa:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 10px 36px rgba(37,211,102,0.5); }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--white);
+      color: var(--pink-deep);
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      padding: 0.9rem 1.8rem;
+      border-radius: 50px;
+      box-shadow: var(--shadow-sm);
+      border: 2.5px solid var(--pink);
+      cursor: pointer;
+      transition: all 0.25s;
+    }
+
+    .btn-outline:hover { background: var(--pink-light); transform: translateY(-2px); }
+
+    /* ===========================
+       SECTION COMMON
+    =========================== */
+    section { padding: 5rem 1.5rem; position: relative; }
+    .section-inner { max-width: 1000px; margin: 0 auto; }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: var(--pink-light);
+      color: var(--pink-deep);
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border-radius: 50px;
+      padding: 0.3rem 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: 'Pacifico', cursive;
+      font-size: clamp(1.7rem, 4.5vw, 2.8rem);
+      color: var(--text-dark);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-mid);
+      line-height: 1.7;
+      max-width: 600px;
+    }
+
+    /* ===========================
+       ABOUT ME
+    =========================== */
+    #about { background: var(--white); }
+
+    #about .section-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .about-visual { position: relative; }
+
+    .about-img-frame {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      border: 4px solid var(--pink-light);
+      box-shadow: var(--shadow-md);
+    }
+
+    .about-img-frame img { aspect-ratio: 3/4; object-fit: cover; object-position: center top; }
+
+    .about-badge-float {
+      position: absolute;
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 0.75rem 1.1rem;
+      box-shadow: var(--shadow-md);
+      border: 2px solid var(--pink-light);
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--text-dark);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .about-badge-float.top-left  { top: -16px; left: -16px; border-color: var(--sage); }
+    .about-badge-float.bottom-right { bottom: -16px; right: -16px; border-color: var(--blue); }
+
+    .about-text { display: flex; flex-direction: column; gap: 1.5rem; }
+
+    .about-intro { font-size: 1.05rem; color: var(--text-mid); line-height: 1.8; }
+    .about-intro strong { color: var(--pink-deep); }
+
+    .about-highlights { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; }
+
+    .highlight-card {
+      background: var(--cream);
+      border-radius: var(--radius-md);
+      padding: 1rem;
+      border: 2px solid var(--pink-light);
+      transition: all 0.2s;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .highlight-card:hover { border-color: var(--pink); transform: translateY(-3px); box-shadow: var(--shadow-sm); }
+    .highlight-card .h-icon { width: 32px; height: 32px; }
+    .highlight-card .h-title { font-weight: 800; font-size: 0.88rem; color: var(--text-dark); }
+    .highlight-card .h-desc  { font-size: 0.78rem; color: var(--text-soft); }
+
+    /* ===========================
+       EXPERIENCE TIMELINE
+    =========================== */
+    #experience { background: linear-gradient(180deg, var(--pink-light) 0%, var(--cream) 100%); }
+    #experience .section-inner { text-align: center; }
+
+    .timeline {
+      position: relative;
+      margin-top: 3rem;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%; top: 0; bottom: 0;
+      width: 3px;
+      background: linear-gradient(180deg, var(--pink) 0%, var(--blue) 50%, var(--sage) 100%);
+      border-radius: 3px;
+      transform: translateX(-50%);
+    }
+
+    .tl-item {
+      display: grid;
+      grid-template-columns: 1fr 60px 1fr;
+      align-items: start;
+      margin-bottom: 2.5rem;
+    }
+
+    .tl-item:nth-child(odd)  .tl-content  { grid-column: 1; text-align: right; padding-right: 2rem; }
+    .tl-item:nth-child(odd)  .tl-dot-wrap { grid-column: 2; }
+    .tl-item:nth-child(odd)  .tl-spacer   { grid-column: 3; }
+    .tl-item:nth-child(even) .tl-spacer   { grid-column: 1; }
+    .tl-item:nth-child(even) .tl-dot-wrap { grid-column: 2; }
+    .tl-item:nth-child(even) .tl-content  { grid-column: 3; text-align: left; padding-left: 2rem; }
+
+    .tl-dot-wrap { display: flex; justify-content: center; padding-top: 0.4rem; }
+
+    .tl-dot {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      border: 3px solid var(--white);
+      box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+      flex-shrink: 0;
+    }
+
+    .tl-dot.pink   { background: linear-gradient(135deg, var(--pink), var(--pink-deep)); }
+    .tl-dot.blue   { background: linear-gradient(135deg, var(--blue), var(--blue-deep)); }
+    .tl-dot.sage   { background: linear-gradient(135deg, var(--sage), var(--sage-deep)); }
+    .tl-dot.yellow { background: linear-gradient(135deg, var(--yellow), var(--yellow-deep)); }
+
+    .tl-content {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 1.2rem 1.5rem;
+      box-shadow: var(--shadow-sm);
+      border: 2px solid var(--pink-light);
+      transition: all 0.25s;
+    }
+
+    .tl-content:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+
+    .tl-year  { font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: var(--pink-deep); margin-bottom: 0.3rem; }
+    .tl-title { font-weight: 800; font-size: 1rem; color: var(--text-dark); margin-bottom: 0.3rem; }
+    .tl-place { font-size: 0.85rem; color: var(--text-mid); font-weight: 600; }
+    .tl-desc  { font-size: 0.82rem; color: var(--text-soft); margin-top: 0.4rem; line-height: 1.6; }
+
+    /* ===========================
+       SUBJECTS & LEVELS
+    =========================== */
+    #subjects { background: var(--white); }
+
+    .subjects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1.1rem;
+      margin-top: 2.5rem;
+    }
+
+    .subject-card {
+      background: var(--cream);
+      border-radius: var(--radius-md);
+      padding: 1.4rem 1rem;
+      text-align: center;
+      border: 2.5px solid transparent;
+      transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+      display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+    }
+
+    .subject-card:hover { transform: translateY(-6px) scale(1.03); box-shadow: var(--shadow-md); }
+    .subject-card.c-pink   { border-color: var(--pink);   } .subject-card.c-pink:hover   { background: var(--pink-light);  border-color: var(--pink-deep);  }
+    .subject-card.c-blue   { border-color: var(--blue);   } .subject-card.c-blue:hover   { background: var(--blue-light);  border-color: var(--blue-deep);  }
+    .subject-card.c-sage   { border-color: var(--sage);   } .subject-card.c-sage:hover   { background: var(--sage-light);  border-color: var(--sage-deep);  }
+    .subject-card.c-yellow { border-color: var(--yellow); } .subject-card.c-yellow:hover { background: #FFF9E5; border-color: var(--yellow-deep); }
+    .subject-card.c-peach  { border-color: var(--peach);  } .subject-card.c-peach:hover  { background: #FFF1E6; border-color: #E8A070; }
+
+    .subject-icon { width: 48px; height: 48px; }
+    .subject-name { font-weight: 800; font-size: 0.95rem; color: var(--text-dark); line-height: 1.3; }
+    .subject-sub  { font-size: 0.75rem; color: var(--text-soft); }
+
+    .levels-wrap  { margin-top: 3.5rem; }
+    .levels-grid  { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.2rem; margin-top: 1.5rem; }
+
+    .level-card {
+      border-radius: var(--radius-lg);
+      padding: 1.8rem 1.5rem;
+      transition: all 0.25s;
+      display: flex; flex-direction: column; gap: 0.6rem;
+    }
+
+    .level-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+    .level-card.lc-pink { background: linear-gradient(135deg, var(--pink-light), var(--pink)); border: 2px solid var(--pink); }
+    .level-card.lc-blue { background: linear-gradient(135deg, var(--blue-light), var(--blue)); border: 2px solid var(--blue); }
+    .level-card.lc-sage { background: linear-gradient(135deg, var(--sage-light), var(--sage)); border: 2px solid var(--sage); }
+
+    .level-icon  { width: 52px; height: 52px; }
+    .level-title { font-family: 'Pacifico', cursive; font-size: 1.2rem; color: var(--text-dark); }
+    .level-desc  { font-size: 0.9rem; color: var(--text-mid); line-height: 1.6; font-weight: 600; }
+
+    /* ===========================
+       GALLERY
+    =========================== */
+    #gallery { background: linear-gradient(180deg, var(--blue-light) 0%, var(--cream) 100%); }
+    #gallery .section-inner { text-align: center; }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 2.5rem;
+    }
+
+    .gallery-item {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      position: relative;
+      cursor: zoom-in;
+      box-shadow: var(--shadow-sm);
+      border: 3px solid var(--white);
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      aspect-ratio: 4/5;
+    }
+
+    .gallery-item:hover { transform: scale(1.05) rotate(1deg); box-shadow: var(--shadow-lg); z-index: 2; }
+    .gallery-item:nth-child(even):hover { transform: scale(1.05) rotate(-1deg); }
+    .gallery-item img { height: 100%; object-fit: cover; transition: transform 0.5s; }
+    .gallery-item:hover img { transform: scale(1.08); }
+
+    .gallery-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(0deg, rgba(74,55,40,0.55) 0%, transparent 55%);
+      opacity: 0; transition: opacity 0.3s;
+      display: flex; align-items: flex-end; padding: 1rem;
+    }
+
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+    .gallery-overlay-text { color: white; font-weight: 800; font-size: 0.82rem; text-shadow: 0 1px 4px rgba(0,0,0,0.4); }
+
+    /* Gallery expand / collapse */
+    .gallery-more {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.7s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease;
+    }
+
+    .gallery-more.expanded {
+      max-height: 3000px;
+      opacity: 1;
+    }
+
+    .gallery-toggle-wrap {
+      margin-top: 2.2rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .btn-gallery-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--white);
+      color: var(--pink-deep);
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      padding: 0.85rem 2rem;
+      border-radius: 50px;
+      border: 2.5px solid var(--pink);
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .btn-gallery-toggle:hover {
+      background: var(--pink-light);
+      transform: translateY(-3px) scale(1.04);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-gallery-toggle .toggle-icon {
+      transition: transform 0.35s ease;
+      display: flex;
+    }
+
+    .btn-gallery-toggle.open .toggle-icon {
+      transform: rotate(180deg);
+    }
+
+    .gallery-count-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--pink);
+      color: white;
+      font-size: 0.72rem;
+      font-weight: 800;
+      border-radius: 50px;
+      padding: 0.18rem 0.55rem;
+      margin-left: 0.15rem;
+    }
+
+    @media (max-width: 768px) {
+      .gallery-more { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .gallery-more { grid-template-columns: 1fr 1fr; }
+    }
+
+    /* ===========================
+       LIGHTBOX
+    =========================== */
+    .lightbox-overlay {
+      position: fixed; inset: 0; z-index: 9999;
+      background: rgba(10,5,5,0.9);
+      display: none; align-items: center; justify-content: center;
+      padding: 1rem;
+    }
+
+    .lightbox-overlay.active { display: flex; }
+
+    .lightbox-img {
+      max-width: 92vw; max-height: 90vh;
+      border-radius: var(--radius-md);
+      box-shadow: 0 20px 80px rgba(0,0,0,0.6);
+      object-fit: contain;
+    }
+
+    .lightbox-close {
+      position: absolute; top: 1.2rem; right: 1.5rem;
+      width: 44px; height: 44px;
+      background: var(--white);
+      border: none; border-radius: 50%;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+      transition: all 0.2s;
+    }
+
+    .lightbox-close:hover { transform: scale(1.1); background: var(--pink-light); }
+
+    /* ===========================
+       TESTIMONIALS
+    =========================== */
+    #testimonials { background: var(--white); }
+    #testimonials .section-inner { text-align: center; }
+
+    .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 1.4rem; margin-top: 2.5rem; }
+
+    .testi-card {
+      background: var(--cream);
+      border-radius: var(--radius-lg);
+      padding: 2rem 1.5rem;
+      text-align: left;
+      border: 2px solid var(--pink-light);
+      position: relative;
+      transition: all 0.25s;
+    }
+
+    .testi-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--pink); }
+
+    .testi-stars { display: flex; gap: 3px; margin-bottom: 0.8rem; }
+
+    .testi-text { font-size: 0.95rem; color: var(--text-mid); line-height: 1.75; font-style: italic; margin-bottom: 1.2rem; }
+
+    .testi-author { display: flex; align-items: center; gap: 0.75rem; }
+
+    .testi-avatar {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--pink), var(--blue));
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; border: 2px solid var(--white); box-shadow: var(--shadow-sm);
+    }
+
+    .testi-name { font-weight: 800; font-size: 0.9rem; color: var(--text-dark); }
+    .testi-role { font-size: 0.78rem; color: var(--text-soft); margin-top: 0.15rem; }
+
+    .testi-quote-mark { position: absolute; top: 1rem; right: 1.5rem; font-size: 3.5rem; color: var(--pink-light); font-family: Georgia, serif; line-height: 1; }
+
+    .testi-coming-soon {
+      background: var(--pink-light);
+      border: 2px dashed var(--pink);
+      border-radius: var(--radius-lg);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 0.5rem; padding: 2.5rem; text-align: center; grid-column: 1 / -1;
+    }
+
+    .testi-coming-soon .cs-text { font-weight: 700; color: var(--pink-deep); font-size: 0.95rem; }
+    .testi-coming-soon .cs-sub  { font-size: 0.82rem; color: var(--text-soft); }
+
+    /* ===========================
+       LOCATION
+    =========================== */
+    #location { background: linear-gradient(160deg, var(--sage-light) 0%, var(--cream) 100%); }
+
+    .location-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+
+    .location-map {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      border: 4px solid var(--white);
+      background: linear-gradient(135deg, var(--blue-light), var(--sage-light));
+      min-height: 300px;
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 1rem; text-align: center; padding: 2rem;
+    }
+
+    .map-title { font-family: 'Pacifico', cursive; font-size: 1.3rem; color: var(--text-dark); margin-top: 0.5rem; }
+    .map-area  { font-size: 0.95rem; color: var(--text-mid); font-weight: 600; }
+
+    .location-details { display: flex; flex-direction: column; gap: 1.3rem; }
+
+    .loc-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 1.2rem 1.5rem;
+      display: flex; align-items: flex-start; gap: 1rem;
+      box-shadow: var(--shadow-sm);
+      border: 2px solid var(--sage);
+      transition: all 0.2s;
+    }
+
+    .loc-card:hover { border-color: var(--sage-deep); transform: translateX(5px); }
+    .loc-card-icon  { width: 36px; height: 36px; flex-shrink: 0; }
+    .loc-info-title { font-weight: 800; font-size: 0.95rem; color: var(--text-dark); }
+    .loc-info-text  { font-size: 0.88rem; color: var(--text-mid); margin-top: 0.25rem; line-height: 1.6; }
+
+    /* ===========================
+       CONTACT
+    =========================== */
+    #contact { background: linear-gradient(160deg, var(--pink-light) 0%, var(--cream) 100%); text-align: center; }
+
+    .contact-card {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      padding: 3.5rem 2rem;
+      max-width: 680px;
+      margin: 2.5rem auto 0;
+      box-shadow: var(--shadow-lg);
+      border: 3px solid var(--pink-light);
+      position: relative; overflow: hidden;
+    }
+
+    .contact-card::before {
+      content: ''; position: absolute; top: -50px; right: -50px;
+      width: 180px; height: 180px; border-radius: 50%;
+      background: var(--pink-light); opacity: 0.5;
+    }
+
+    .contact-card::after {
+      content: ''; position: absolute; bottom: -60px; left: -60px;
+      width: 200px; height: 200px; border-radius: 50%;
+      background: var(--blue-light); opacity: 0.5;
+    }
+
+    .contact-card-inner { position: relative; z-index: 1; }
+
+    .contact-title { font-family: 'Pacifico', cursive; font-size: 1.9rem; color: var(--text-dark); margin-bottom: 0.5rem; }
+    .contact-sub   { font-size: 0.95rem; color: var(--text-mid); line-height: 1.7; margin-bottom: 2rem; }
+
+    .contact-methods { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem; }
+
+    .contact-method {
+      display: flex; align-items: center; gap: 1rem;
+      padding: 1rem 1.5rem; border-radius: var(--radius-md);
+      font-weight: 700; font-size: 1rem; transition: all 0.25s;
+    }
+
+    .contact-method.wa    { background: linear-gradient(135deg, #25D366, #128C7E); color: white; box-shadow: 0 6px 24px rgba(37,211,102,0.35); }
+    .contact-method.wa:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 10px 32px rgba(37,211,102,0.5); }
+    .contact-method.email { background: var(--cream); color: var(--text-dark); border: 2px solid var(--pink-light); }
+    .contact-method.email:hover { background: var(--pink-light); border-color: var(--pink); transform: translateY(-2px); }
+
+    .cm-icon  { width: 32px; height: 32px; flex-shrink: 0; }
+    .cm-info  { text-align: left; }
+    .cm-label { font-size: 0.72rem; opacity: 0.75; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+    .cm-value { font-size: 1.05rem; font-weight: 800; }
+
+    .contact-footer { font-size: 0.85rem; color: var(--text-soft); line-height: 1.7; }
+    .contact-footer strong { color: var(--pink-deep); }
+
+    /* ===========================
+       FOOTER
+    =========================== */
+    footer { background: var(--text-dark); color: var(--cream); text-align: center; padding: 2.5rem 1.5rem; }
+    .footer-brand { font-family: 'Pacifico', cursive; font-size: 1.5rem; color: var(--pink); margin-bottom: 0.5rem; }
+    .footer-tagline { font-size: 0.85rem; color: var(--text-soft); margin-bottom: 1.5rem; }
+    .footer-links { display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 1.5rem; flex-wrap: wrap; }
+    .footer-links a { font-size: 0.82rem; color: #C4A89A; font-weight: 600; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--pink); }
+    .footer-copy { font-size: 0.75rem; color: #7A5C4A; }
+
+    /* ===========================
+       WHATSAPP FAB
+    =========================== */
+    .wa-fab {
+      position: fixed; bottom: 24px; right: 24px; z-index: 999;
+      width: 62px; height: 62px; border-radius: 50%;
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: white; display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 6px 28px rgba(37,211,102,0.5);
+      transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .wa-fab:hover { transform: scale(1.15); box-shadow: 0 10px 36px rgba(37,211,102,0.6); }
+
+    .wa-fab::after {
+      content: ''; position: absolute; inset: -4px; border-radius: 50%;
+      border: 2px solid rgba(37,211,102,0.4);
+      animation: waPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes waPulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.18); opacity: 0; } }
+
+    /* ===========================
+       SCROLL ANIMATIONS
+    =========================== */
+    .reveal       { opacity: 0; transform: translateY(30px);   transition: opacity 0.65s ease, transform 0.65s ease; }
+    .reveal-left  { opacity: 0; transform: translateX(-30px);  transition: opacity 0.65s ease, transform 0.65s ease; }
+    .reveal-right { opacity: 0; transform: translateX(30px);   transition: opacity 0.65s ease, transform 0.65s ease; }
+    .reveal.visible, .reveal-left.visible, .reveal-right.visible { opacity: 1; transform: translate(0); }
+
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+    .delay-4 { transition-delay: 0.4s; }
+    .delay-5 { transition-delay: 0.5s; }
+
+    /* ===========================
+       RESPONSIVE
+    =========================== */
+    @media (max-width: 768px) {
+      nav { padding: 0.65rem 1rem; }
+      .nav-links { display: none; }
+
+      #about .section-inner { grid-template-columns: 1fr; }
+      .about-visual { order: -1; max-width: 280px; margin: 0 auto; }
+
+      .timeline::before { left: 28px; }
+      .tl-item { grid-template-columns: 56px 1fr; }
+      .tl-item:nth-child(odd)  .tl-content,
+      .tl-item:nth-child(even) .tl-content  { grid-column: 2; text-align: left; padding-left: 1.2rem; padding-right: 0; }
+      .tl-item:nth-child(odd)  .tl-dot-wrap,
+      .tl-item:nth-child(even) .tl-dot-wrap { grid-column: 1; grid-row: 1; justify-content: flex-start; padding-left: 2px; }
+      .tl-spacer { display: none; }
+
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .location-inner { grid-template-columns: 1fr; }
+      .about-highlights { grid-template-columns: 1fr 1fr; }
+      section { padding: 3.5rem 1rem; }
+    }
+
+    @media (max-width: 480px) {
+      .subjects-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid  { grid-template-columns: 1fr 1fr; }
+      .about-highlights { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===================== SVG DEFS (inline, hidden) ===================== -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <defs>
+    <!-- Star -->
+    <symbol id="ico-star" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+    </symbol>
+    <!-- Heart -->
+    <symbol id="ico-heart" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+    </symbol>
+    <!-- Book -->
+    <symbol id="ico-book" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5v14zm2.5-2a.5.5 0 0 0 0 1H18v-1H6.5z"/>
+    </symbol>
+    <!-- Trophy / Award -->
+    <symbol id="ico-trophy" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M7 2v2H5a2 2 0 0 0-2 2v1c0 2.55 1.92 4.63 4.39 4.94A5.01 5.01 0 0 0 11 14.9V17H9v2h6v-2h-2v-2.1a5.01 5.01 0 0 0 3.61-2.96C19.08 11.63 21 9.55 21 7V6a2 2 0 0 0-2-2h-2V2H7zm0 4V4h10v2H7zM5 7h2v3.83A3 3 0 0 1 5 8V7zm12 0h2v1a3 3 0 0 1-2 2.83V7z"/>
+    </symbol>
+    <!-- Mortarboard / Graduate -->
+    <symbol id="ico-graduate" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+    </symbol>
+    <!-- Sprout / Leaf -->
+    <symbol id="ico-sprout" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M17 8C8 10 5.9 16.17 3.82 21h1.98l1-2.3A4.49 4.49 0 0 0 8 19c8 0 9-8 9-8 0 0-3 0-3 2H9c0-3 5-5 5-5V6c0-1.1.9-2 2-2s2 .9 2 2h2c0-2.76-2.24-5-5-4.93L17 8z"/>
+    </symbol>
+    <!-- Clock -->
+    <symbol id="ico-clock" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/>
+    </symbol>
+    <!-- Home -->
+    <symbol id="ico-home" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+    </symbol>
+    <!-- Pin / Location -->
+    <symbol id="ico-pin" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+    </symbol>
+    <!-- WhatsApp -->
+    <symbol id="ico-wa" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+    </symbol>
+    <!-- Email -->
+    <symbol id="ico-email" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+    </symbol>
+    <!-- Person -->
+    <symbol id="ico-person" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+    </symbol>
+    <!-- Map -->
+    <symbol id="ico-map" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z"/>
+    </symbol>
+    <!-- Pencil -->
+    <symbol id="ico-pencil" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+    </symbol>
+    <!-- Chat / Speech -->
+    <symbol id="ico-chat" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+    </symbol>
+    <!-- Numbers -->
+    <symbol id="ico-numbers" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M4 6h2v2H4V6zm0 4h2v2H4v-2zm0 4h2v2H4v-2zm16-8h-8v2h8V6zm0 4h-8v2h8v-2zm0 4h-8v2h8v-2z"/>
+    </symbol>
+    <!-- Flag / Indonesia -->
+    <symbol id="ico-flag" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M14.4 6H20v6h-5.6L12 10.5V6h2.4zM4 6h6v4.5L7.6 12H4V6zm0 8h16v4H4v-4z"/>
+    </symbol>
+    <!-- Phonics / Audio -->
+    <symbol id="ico-phonics" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+    </symbol>
+    <!-- Backpack -->
+    <symbol id="ico-bag" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M20 6h-2.18c.07-.44.18-.86.18-1.3C18 2.55 15.52 1 12 1S6 2.55 6 4.7c0 .44.11.86.18 1.3H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8a2 2 0 0 0-2-2zm-8-3.3c2.09 0 4 .91 4 2C16 5.82 14.09 7 12 7S8 5.82 8 4.7c0-1.09 1.91-2 4-2zm0 10.5-4-2.5V8.74L12 11l4-2.26V11l-4 2.2z"/>
+    </symbol>
+    <!-- Writing -->
+    <symbol id="ico-write" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+    </symbol>
+    <!-- Bear / Teddy -->
+    <symbol id="ico-bear" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M18.5 3A2.5 2.5 0 0 0 16 5.5c0 .33.07.64.18.93L14.5 8H9.5L7.82 6.43A2.5 2.5 0 0 0 8 5.5C8 4.12 6.88 3 5.5 3S3 4.12 3 5.5C3 6.7 3.84 7.71 5 7.93V9a7 7 0 0 0 6 6.92V17H9v2h6v-2h-2v-1.08A7 7 0 0 0 19 9V7.93C20.16 7.71 21 6.7 21 5.5A2.5 2.5 0 0 0 18.5 3zM9.5 11a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm5 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+    </symbol>
+    <!-- Calistung / ABC -->
+    <symbol id="ico-abc" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M18.5 10H17V5a3 3 0 0 0-6 0v5h-1.5A1.5 1.5 0 0 0 8 11.5v8A1.5 1.5 0 0 0 9.5 21h9a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 18.5 10zM13 5a1 1 0 0 1 2 0v5h-2V5zm1 11a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/>
+    </symbol>
+    <!-- Montessori star (star with lines) -->
+    <symbol id="ico-montessori" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.4 2.4-7.4L2 9.4h7.6z"/>
+    </symbol>
+    <!-- Close X -->
+    <symbol id="ico-close" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+    </symbol>
+    <!-- Sparkle / Wand -->
+    <symbol id="ico-sparkle" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M7 3l1.5 3L12 7.5 8.5 9 7 12l-1.5-3L2 7.5 5.5 6 7 3zm10 10l1 2 2 1-2 1-1 2-1-2-2-1 2-1 1-2zm-3-6l.75 1.5L16 9.25l-1.5.75L13.75 11.5 13 10l-1.5-.75L13 8.5 13.75 7z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ============================
+     NAV
+============================= -->
+<nav id="main-nav" aria-label="Navigasi utama">
+  <a href="#hero" class="nav-brand">
+    <div class="nav-brand-icon">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><use href="#ico-sparkle"/></svg>
+    </div>
+    Little Steps by Miss Ayu
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">Tentang Miss Ayu</a></li>
+    <li><a href="#experience">Pengalaman</a></li>
+    <li><a href="#subjects">Program</a></li>
+    <li><a href="#gallery">Galeri</a></li>
+    <li><a href="#testimonials">Testimoni</a></li>
+    <li>
+      <a href="https://wa.me/6282112590454?text=Halo%20Miss%20Ayu!" class="nav-wa" target="_blank" rel="noopener">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><use href="#ico-wa"/></svg>
+        WhatsApp
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<!-- ============================
+     HERO
+============================= -->
+<section id="hero" aria-label="Bagian utama">
+  <div class="hero-bg-pattern" aria-hidden="true"></div>
+  <div class="blob blob-1" aria-hidden="true"></div>
+  <div class="blob blob-2" aria-hidden="true"></div>
+  <div class="blob blob-3" aria-hidden="true"></div>
+
+  <!-- CSS-only decorative shapes -->
+  <div class="hero-deco deco-shape" aria-hidden="true">
+    <svg width="42" height="42" viewBox="0 0 24 24" fill="#F9A8C9" opacity="0.7"><use href="#ico-star"/></svg>
+  </div>
+  <div class="hero-deco deco-shape" aria-hidden="true" style="animation-delay:0.8s">
+    <svg width="34" height="34" viewBox="0 0 24 24" fill="#A8D8EA" opacity="0.7"><use href="#ico-heart"/></svg>
+  </div>
+  <div class="hero-deco deco-shape" aria-hidden="true" style="animation-delay:1.6s">
+    <svg width="38" height="38" viewBox="0 0 24 24" fill="#B5D5C5" opacity="0.65"><use href="#ico-book"/></svg>
+  </div>
+  <div class="hero-deco deco-shape" aria-hidden="true" style="animation-delay:0.4s">
+    <svg width="36" height="36" viewBox="0 0 24 24" fill="#F9A8C9" opacity="0.6"><use href="#ico-bear"/></svg>
+  </div>
+  <div class="hero-deco deco-shape" aria-hidden="true" style="animation-delay:2.2s">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="#FFE08A" opacity="0.7"><use href="#ico-star"/></svg>
+  </div>
+
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="#E8749F"><use href="#ico-sparkle"/></svg>
+      Guru Privat Anak Berpengalaman
+    </div>
+
+    <h1 class="hero-title">
+      <span class="accent-blue">Little</span> Steps<br>by <span class="accent-sage">Miss Ayu</span>
+    </h1>
+
+    <p class="hero-tagline">
+      "Helping little learners grow,<br>one step at a time."
+    </p>
+
+    <div class="hero-stats">
+      <div class="stat-pill">
+        <svg class="icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="#E8749F"><use href="#ico-trophy"/></svg>
+        10+ Tahun Pengalaman
+      </div>
+      <div class="stat-pill">
+        <svg class="icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="#6BBAD6"><use href="#ico-graduate"/></svg>
+        Sertifikasi Montessori
+      </div>
+      <div class="stat-pill">
+        <svg class="icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="#7BB89A"><use href="#ico-home"/></svg>
+        Home Visit
+      </div>
+      <div class="stat-pill">
+        <svg class="icon-svg" width="20" height="20" viewBox="0 0 24 24" fill="#E8749F"><use href="#ico-heart"/></svg>
+        Amanah &amp; Terpercaya
+      </div>
+    </div>
+
+
+
+    <div class="hero-cta-group">
+      <a href="https://wa.me/6282112590454?text=Halo%20Miss%20Ayu%2C%20saya%20tertarik%20dengan%20les%20privat%20untuk%20anak%20saya.%20Boleh%20saya%20bertanya%20lebih%20lanjut%3F"
+         id="hero-wa-btn"
+         class="btn-wa"
+         target="_blank" rel="noopener"
+         aria-label="Hubungi Miss Ayu via WhatsApp">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><use href="#ico-wa"/></svg>
+        Chat WhatsApp Sekarang
+      </a>
+      <a href="#about" class="btn-outline">
+        Kenali Miss Ayu
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#E8749F"><path d="M7 10l5 5 5-5H7z"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     ABOUT
+============================= -->
+<section id="about" aria-label="Tentang Miss Ayu">
+  <div class="section-inner">
+    <div class="about-visual reveal-left">
+      <div class="about-img-frame">
+        <img src="images/Ayu Khristina.jpeg"
+             alt="Ayu Khristina, guru privat anak berpengalaman"
+             loading="lazy" />
+      </div>
+      <div class="about-badge-float top-left">
+        <svg class="icon-svg" width="28" height="28" viewBox="0 0 24 24" fill="#7BB89A"><use href="#ico-graduate"/></svg>
+        <div>
+          <div style="font-size:0.7rem;color:var(--text-soft);font-weight:700;">Lulusan</div>
+          <div>STIE Rawamangun</div>
+        </div>
+      </div>
+      <div class="about-badge-float bottom-right">
+        <svg class="icon-svg" width="28" height="28" viewBox="0 0 24 24" fill="#6BBAD6"><use href="#ico-montessori"/></svg>
+        <div>
+          <div style="font-size:0.7rem;color:var(--text-soft);font-weight:700;">Tersertifikasi</div>
+          <div>Montessori Method</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-text reveal-right">
+      <div>
+        <div class="section-label">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#E8749F"><use href="#ico-heart"/></svg>
+          Tentang Saya
+        </div>
+        <h2 class="section-title">Halo, saya<br>Ayu Khristina!</h2>
+      </div>
+
+      <p class="about-intro">
+        Saya adalah guru privat anak yang <strong>berdedikasi &amp; berpengalaman lebih dari 10 tahun</strong> di bidang pendidikan anak usia dini hingga SD. Saya percaya bahwa setiap anak punya cara belajar yang unik — dan tugas saya adalah menemukan cara terbaik untuk membantu mereka berkembang dengan percaya diri dan bahagia.
+      </p>
+
+      <p class="about-intro">
+        Lulus dari <strong>STIE Rawamangun</strong> dan tersertifikasi dalam <strong>Metode Montessori</strong>, saya menggabungkan pendekatan akademis yang terstruktur dengan suasana belajar yang menyenangkan dan hangat — persis seperti di rumah sendiri.
+      </p>
+
+      <div class="about-highlights">
+        <div class="highlight-card delay-1 reveal">
+          <svg class="h-icon" width="32" height="32" viewBox="0 0 24 24" fill="#7BB89A"><use href="#ico-graduate"/></svg>
+          <div class="h-title">Pendidikan Formal</div>
+          <div class="h-desc">STIE Rawamangun, Jakarta</div>
+        </div>
+        <div class="highlight-card delay-2 reveal">
+          <svg class="h-icon" width="32" height="32" viewBox="0 0 24 24" fill="#6BBAD6"><use href="#ico-montessori"/></svg>
+          <div class="h-title">Montessori Certified</div>
+          <div class="h-desc">Metode pembelajaran holistik</div>
+        </div>
+        <div class="highlight-card delay-3 reveal">
+          <svg class="h-icon" width="32" height="32" viewBox="0 0 24 24" fill="#E8749F"><use href="#ico-clock"/></svg>
+          <div class="h-title">10+ Tahun Mengajar</div>
+          <div class="h-desc">Ratusan anak terbantu berprestasi</div>
+        </div>
+        <div class="highlight-card delay-4 reveal">
+          <svg class="h-icon" width="32" height="32" viewBox="0 0 24 24" fill="#7BB89A"><use href="#ico-home"/></svg>
+          <div class="h-title">Home Visit</div>
+          <div class="h-desc">Belajar nyaman di rumah anak</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     EXPERIENCE TIMELINE
+============================= -->
+<section id="experience" aria-label="Pengalaman mengajar Miss Ayu">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center;">
+      <div class="section-label">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#E8749F"><use href="#ico-trophy"/></svg>
+        Rekam Jejak
+      </div>
+      <h2 class="section-title">Pengalaman Mengajar</h2>
+      <p class="section-subtitle" style="margin:0 auto;">
+        Perjalanan mengajar Miss Ayu penuh dedikasi — dari sekolah Montessori bergengsi hingga pendampingan privat langsung di rumah.
+      </p>
+    </div>
+
+    <div class="timeline" aria-label="Timeline pengalaman">
+
+      <div class="tl-item">
+        <div class="tl-content reveal-left">
+          <div class="tl-year">Pengalaman Sekolah</div>
+          <div class="tl-title">Guru Kelas &amp; Aktivitas</div>
+          <div class="tl-place">Montessori Gading Permata School</div>
+          <div class="tl-desc">Mengajar dengan metode Montessori untuk anak Playgroup &amp; TK — fokus pada kemandirian, sensorik, dan kecintaan belajar dari dini.</div>
+        </div>
+        <div class="tl-dot-wrap">
+          <div class="tl-dot pink">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><use href="#ico-sprout"/></svg>
+          </div>
+        </div>
+        <div class="tl-spacer"></div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-spacer"></div>
+        <div class="tl-dot-wrap">
+          <div class="tl-dot blue">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><use href="#ico-heart"/></svg>
+          </div>
+        </div>
+        <div class="tl-content reveal-right">
+          <div class="tl-year">Pengalaman Sekolah</div>
+          <div class="tl-title">Guru &amp; Fasilitator Belajar</div>
+          <div class="tl-place">Blooming School</div>
+          <div class="tl-desc">Mendampingi perkembangan anak secara holistik — kognitif, emosional, dan sosial — dalam lingkungan belajar yang hangat dan stimulatif.</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-content reveal-left">
+          <div class="tl-year">Hingga Sekarang</div>
+          <div class="tl-title">Guru Privat Les Rumahan</div>
+          <div class="tl-place">Home Visit — Jakarta Utara</div>
+          <div class="tl-desc">Memberikan bimbingan belajar intensif &amp; personal langsung di rumah siswa, meliputi calistung, Bahasa Inggris, Matematika, persiapan sekolah, dan pendampingan PR.</div>
+        </div>
+        <div class="tl-dot-wrap">
+          <div class="tl-dot sage">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><use href="#ico-home"/></svg>
+          </div>
+        </div>
+        <div class="tl-spacer"></div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-spacer"></div>
+        <div class="tl-dot-wrap">
+          <div class="tl-dot yellow">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><use href="#ico-graduate"/></svg>
+          </div>
+        </div>
+        <div class="tl-content reveal-right">
+          <div class="tl-year">Sertifikasi</div>
+          <div class="tl-title">Montessori Certified Educator</div>
+          <div class="tl-place">Sertifikasi Resmi Metode Montessori</div>
+          <div class="tl-desc">Terlatih secara profesional dalam filosofi Montessori — menciptakan lingkungan belajar yang memerdekakan anak untuk menemukan kemampuan terbaiknya.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     SUBJECTS & LEVELS
+============================= -->
+<section id="subjects" aria-label="Mata pelajaran dan level yang diajarkan">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center;">
+      <div class="section-label">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#E8749F"><use href="#ico-book"/></svg>
+        Program Belajar
+      </div>
+      <h2 class="section-title">Yang Miss Ayu Ajarkan</h2>
+      <p class="section-subtitle" style="margin:0 auto;">
+        Belajar jadi seru dan menyenangkan! Semua mata pelajaran diajarkan dengan pendekatan yang sesuai usia dan kebutuhan anak.
+      </p>
+    </div>
+
+    <div class="subjects-grid" aria-label="Daftar mata pelajaran">
+      <div class="subject-card c-blue reveal delay-1">
+        <svg class="subject-icon" viewBox="0 0 24 24" fill="#6BBAD6"><use href="#ico-chat"/></svg>
+        <div class="subject-name">English</div>
+        <div class="subject-sub">Listening, Speaking, Reading, Writing</div>
+      </div>
+      <div class="subject-card c-pink reveal delay-2">
+        <svg class="subject-icon" viewBox="0 0 24 24" fill="#E8749F"><use href="#ico-numbers"/></svg>
+        <div class="subject-name">Mathematics</div>
+        <div class="subject-sub">Konsep bilangan &amp; operasi dasar</div>
+      </div>
+      <div class="subject-card c-sage reveal delay-3">
+        <svg class="subject-icon" viewBox="0 0 24 24" fill="#7BB89A"><use href="#ico-flag"/></svg>
+        <div class="subject-name">Bahasa Indonesia</div>
+        <div class="subject-sub">Membaca, menulis, berbicara</div>
+      </div>
+      <div class="subject-card c-yellow reveal delay-4">
+        <svg class="subject-icon" viewBox="0 0 24 24" fill="#F5C842"><use href="#ico-phonics"/></svg>
+        <div class="subject-name">Reading &amp; Phonics</div>
+        <div class="subject-sub">Dasar membaca &amp; bunyi huruf</div>
+      </div>
+      <div class="subject-card c-peach reveal delay-1">
+        <svg class="subject-icon" viewBox="0 0 24 24" fill="#E8A070"><use href="#ico-write"/></svg>
+        <div class="subject-name">Writing</div>
+        <div class="subject-sub">Menulis rapi &amp; ekspresif</div>
+      </div>
+      <div class="subject-card c-pink reveal delay-2">
+        <svg class="subject-icon" viewBox="0 0 24 24" fill="#E8749F"><use href="#ico-chat"/></svg>
+        <div class="subject-name">Speaking</div>
+        <div class="subject-sub">Percaya diri berbicara</div>
+      </div>
+      <div class="subject-card c-sage reveal delay-3">
+        <svg class="subject-icon" viewBox="0 0 24 24" fill="#7BB89A"><use href="#ico-abc"/></svg>
+        <div class="subject-name">Calistung</div>
+        <div class="subject-sub">Baca, tulis, hitung dasar</div>
+      </div>
+      <div class="subject-card c-blue reveal delay-4">
+        <svg class="subject-icon" viewBox="0 0 24 24" fill="#6BBAD6"><use href="#ico-bag"/></svg>
+        <div class="subject-name">PR &amp; Pelajaran Sekolah</div>
+        <div class="subject-sub">Pendampingan tugas &amp; ulangan</div>
+      </div>
+    </div>
+
+    <!-- Levels -->
+    <div class="levels-wrap">
+      <div class="reveal" style="text-align:center;margin-bottom:1.5rem;">
+        <div class="section-label">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="#E8749F"><use href="#ico-star"/></svg>
+          Untuk Siapa
+        </div>
+        <h3 class="section-title" style="font-size:clamp(1.3rem,3vw,2rem);">Level yang Dilayani</h3>
+      </div>
+      <div class="levels-grid" aria-label="Level pendidikan yang dilayani">
+        <div class="level-card lc-pink reveal delay-1">
+          <svg class="level-icon" viewBox="0 0 24 24" fill="#E8749F"><use href="#ico-bear"/></svg>
+          <div class="level-title">Preschool</div>
+          <div class="level-desc">Playgroup &amp; TK<br>Fondasi belajar yang kuat dan menyenangkan sejak dini</div>
+        </div>
+        <div class="level-card lc-blue reveal delay-2">
+          <svg class="level-icon" viewBox="0 0 24 24" fill="#6BBAD6"><use href="#ico-bag"/></svg>
+          <div class="level-title">Sekolah Dasar</div>
+          <div class="level-desc">SD Kelas 1 – 6<br>Pendampingan belajar menyeluruh di semua mata pelajaran</div>
+        </div>
+        <div class="level-card lc-sage reveal delay-3">
+          <svg class="level-icon" viewBox="0 0 24 24" fill="#7BB89A"><use href="#ico-star"/></svg>
+          <div class="level-title">Persiapan Sekolah</div>
+          <div class="level-desc">School Preparation<br>Siap mental, akademis &amp; sosial memasuki jenjang baru</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     GALLERY
+============================= -->
+<section id="gallery" aria-label="Galeri kegiatan belajar Miss Ayu">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center;">
+      <div class="section-label">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#E8749F"><use href="#ico-heart"/></svg>
+        Galeri
+      </div>
+      <h2 class="section-title">Momen Belajar Bersama</h2>
+      <p class="section-subtitle" style="margin:0 auto;">
+        Setiap sesi belajar adalah petualangan baru yang penuh tawa, penemuan, dan pertumbuhan.
+      </p>
+    </div>
+
+    <!-- 6 foto utama selalu tampil -->
+    <div class="gallery-grid" aria-label="Foto kegiatan mengajar">
+      <div class="gallery-item reveal delay-1" onclick="openLightbox(this)">
+        <img src="images/WhatsApp Image 2026-09-10 at 22.03.12 (1).jpeg" alt="Kegiatan belajar bersama Miss Ayu" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-overlay-text">Sesi Belajar</span></div>
+      </div>
+      <div class="gallery-item reveal delay-2" onclick="openLightbox(this)">
+        <img src="images/WhatsApp Image 2026-09-10 at 22.03.13 (1).jpeg" alt="Kegiatan belajar bersama Miss Ayu" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-overlay-text">Sesi Belajar</span></div>
+      </div>
+      <div class="gallery-item reveal delay-3" onclick="openLightbox(this)">
+        <img src="images/WhatsApp Image 2026-09-10 at 22.03.13 (2) (1).jpeg" alt="Kegiatan belajar bersama Miss Ayu" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-overlay-text">Sesi Belajar</span></div>
+      </div>
+      <div class="gallery-item reveal delay-1" onclick="openLightbox(this)">
+        <img src="images/WhatsApp Image 2026-09-10 at 22.03.14 (1) (1).jpeg" alt="Kegiatan belajar bersama Miss Ayu" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-overlay-text">Sesi Belajar</span></div>
+      </div>
+      <div class="gallery-item reveal delay-2" onclick="openLightbox(this)">
+        <img src="images/WhatsApp Image 2026-09-10 at 22.03.14 (2).jpeg" alt="Kegiatan belajar bersama Miss Ayu" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-overlay-text">Sesi Belajar</span></div>
+      </div>
+      <div class="gallery-item reveal delay-3" onclick="openLightbox(this)">
+        <img src="images/WhatsApp Image 2026-09-10 at 22.03.15 (1).jpeg" alt="Kegiatan belajar bersama Miss Ayu" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-overlay-text">Sesi Belajar</span></div>
+      </div>
+    </div>
+
+    <!-- 12 foto tambahan — tersembunyi, muncul saat klik -->
+    <div class="gallery-more" id="gallery-more" aria-label="Foto tambahan kegiatan mengajar">
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="images/WhatsApp Image 2026-09-10 at 22.03.16 (1).jpeg" alt="Kegiatan belajar bersama Miss Ayu" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-overlay-text">Sesi Belajar</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="images/WhatsApp Image 2026-09-10 at 22.03.18 (1) (1).jpeg" alt="Kegiatan belajar bersama Miss Ayu" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-overlay-text">Sesi Belajar</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="images/WhatsApp Image 2026-09-10 at 22.03.18 (2).jpeg" alt="Kegiatan belajar bersama Miss Ayu" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-overlay-text">Sesi Belajar</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="images/WhatsApp Image 2026-09-10 at 22.03.20 (1).jpeg" alt="Kegiatan belajar bersama Miss Ayu" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-overlay-text">Sesi Belajar</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="images/WhatsApp Image 2026-09-10 at 22.03.21 (1).jpeg" alt="Kegiatan belajar bersama Miss Ayu" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-overlay-text">Sesi Belajar</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="images/WhatsApp Image 2026-09-10 at 22.03.22 (1).jpeg" alt="Kegiatan belajar bersama Miss Ayu" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-overlay-text">Sesi Belajar</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="images/WhatsApp Image 2026-09-10 at 22.03.23 (1).jpeg" alt="Kegiatan belajar bersama Miss Ayu" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-overlay-text">Sesi Belajar</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="images/WhatsApp Image 2026-09-10 at 22.03.25 (1) (1).jpeg" alt="Kegiatan belajar bersama Miss Ayu" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-overlay-text">Sesi Belajar</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="images/WhatsApp Image 2026-09-10 at 22.03.25 (2).jpeg" alt="Kegiatan belajar bersama Miss Ayu" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-overlay-text">Sesi Belajar</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="images/WhatsApp Image 2026-09-10 at 22.03.27 (1).jpeg" alt="Kegiatan belajar bersama Miss Ayu" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-overlay-text">Sesi Belajar</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="images/WhatsApp Image 2026-09-10 at 22.03.28 (1).jpeg" alt="Kegiatan belajar bersama Miss Ayu" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-overlay-text">Sesi Belajar</span></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox(this)">
+        <img src="images/WhatsApp Image 2026-09-10 at 22.03.54 (1).jpeg" alt="Kegiatan belajar bersama Miss Ayu" loading="lazy" />
+        <div class="gallery-overlay"><span class="gallery-overlay-text">Sesi Belajar</span></div>
+      </div>
+    </div>
+
+    <!-- Tombol toggle -->
+    <div class="gallery-toggle-wrap">
+      <button class="btn-gallery-toggle" id="gallery-toggle-btn" onclick="toggleGallery()" aria-expanded="false" aria-controls="gallery-more">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#E8749F"><use href="#ico-heart"/></svg>
+        <span id="gallery-toggle-text">Lihat Semua Foto</span>
+        <span class="gallery-count-badge">+12</span>
+        <span class="toggle-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#E8749F"><path d="M7 10l5 5 5-5H7z"/></svg>
+        </span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox-overlay" id="lightbox" role="dialog" aria-modal="true" aria-label="Tampilan foto" onclick="closeLightbox(event)">
+  <button class="lightbox-close" id="lightbox-close-btn" onclick="closeLightbox()" aria-label="Tutup">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="#4A3728"><use href="#ico-close"/></svg>
+  </button>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+</div>
+
+<!-- ============================
+     TESTIMONIALS
+============================= -->
+<section id="testimonials" aria-label="Testimoni orang tua">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center;">
+      <div class="section-label">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#E8749F"><use href="#ico-chat"/></svg>
+        Kata Orang Tua
+      </div>
+      <h2 class="section-title">Apa Kata Mereka?</h2>
+      <p class="section-subtitle" style="margin:0 auto;">
+        Kepercayaan orang tua adalah motivasi terbesar Miss Ayu untuk terus memberikan yang terbaik.
+      </p>
+    </div>
+
+    <div class="testi-grid">
+      <div class="testi-card reveal delay-1">
+        <span class="testi-quote-mark" aria-hidden="true">"</span>
+        <div class="testi-stars" aria-label="5 bintang">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5C842"><use href="#ico-star"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5C842"><use href="#ico-star"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5C842"><use href="#ico-star"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5C842"><use href="#ico-star"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5C842"><use href="#ico-star"/></svg>
+        </div>
+        <p class="testi-text">
+          "Anakku yang tadinya tidak mau belajar, sekarang malah minta les setiap hari! Miss Ayu benar-benar tahu cara membuat belajar jadi menyenangkan. Recommended banget untuk para orang tua!"
+        </p>
+        <div class="testi-author">
+          <div class="testi-avatar">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><use href="#ico-person"/></svg>
+          </div>
+          <div>
+            <div class="testi-name">Mama Raffa</div>
+            <div class="testi-role">Orang tua murid, SD Kelas 2</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card reveal delay-2">
+        <span class="testi-quote-mark" aria-hidden="true">"</span>
+        <div class="testi-stars" aria-label="5 bintang">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5C842"><use href="#ico-star"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5C842"><use href="#ico-star"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5C842"><use href="#ico-star"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5C842"><use href="#ico-star"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5C842"><use href="#ico-star"/></svg>
+        </div>
+        <p class="testi-text">
+          "Miss Ayu sabar sekali dalam mengajari anak saya yang susah fokus. Dalam 2 bulan, nilai Matematika anak saya naik drastis. Beliau juga sangat komunikatif dengan orang tua. Terima kasih Miss Ayu!"
+        </p>
+        <div class="testi-author">
+          <div class="testi-avatar">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><use href="#ico-person"/></svg>
+          </div>
+          <div>
+            <div class="testi-name">Bapak Darmawan</div>
+            <div class="testi-role">Orang tua murid, SD Kelas 4</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card reveal delay-3">
+        <span class="testi-quote-mark" aria-hidden="true">"</span>
+        <div class="testi-stars" aria-label="5 bintang">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5C842"><use href="#ico-star"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5C842"><use href="#ico-star"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5C842"><use href="#ico-star"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5C842"><use href="#ico-star"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5C842"><use href="#ico-star"/></svg>
+        </div>
+        <p class="testi-text">
+          "Anak saya masuk TK tahun ini dan Miss Ayu yang mempersiapkannya. Dari yang belum bisa baca sama sekali, sekarang sudah bisa membaca dengan lancar. Metode beliau memang beda, sangat efektif!"
+        </p>
+        <div class="testi-author">
+          <div class="testi-avatar">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><use href="#ico-person"/></svg>
+          </div>
+          <div>
+            <div class="testi-name">Mama Khalilah</div>
+            <div class="testi-role">Orang tua murid, Persiapan TK</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card testi-coming-soon reveal delay-4">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="#E8749F"><use href="#ico-pencil"/></svg>
+        <div class="cs-text">Testimoni lebih banyak segera menyusul!</div>
+        <div class="cs-sub">Ingin jadi bagian dari keluarga Little Steps?<br>Hubungi Miss Ayu sekarang.</div>
+        <br>
+        <a href="https://wa.me/6282112590454" id="testi-wa-btn" class="btn-wa" target="_blank" rel="noopener" style="font-size:0.9rem;padding:0.7rem 1.5rem;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><use href="#ico-wa"/></svg>
+          Chat Miss Ayu
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     LOCATION
+============================= -->
+<section id="location" aria-label="Area layanan Miss Ayu">
+  <div class="section-inner">
+    <div class="reveal" style="text-align:center;margin-bottom:3rem;">
+      <div class="section-label">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#E8749F"><use href="#ico-pin"/></svg>
+        Lokasi
+      </div>
+      <h2 class="section-title">Area Layanan</h2>
+      <p class="section-subtitle" style="margin:0 auto;">
+        Miss Ayu melayani home visit langsung ke rumah Anda — belajar jadi lebih nyaman tanpa perlu antar-jemput!
+      </p>
+    </div>
+
+    <div class="location-inner">
+      <div class="location-map reveal-left" aria-label="Peta area layanan">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="#7BB89A"><use href="#ico-map"/></svg>
+        <div class="map-title">Jakarta Utara</div>
+        <div class="map-area">Cilincing &amp; Sekitarnya</div>
+        <small style="color:var(--text-soft);font-size:0.8rem;text-align:center;">
+          Hubungi Miss Ayu untuk konfirmasi<br>apakah area Anda terjangkau
+        </small>
+        <a href="https://maps.google.com/?q=Cilincing,+Jakarta+Utara"
+           id="map-link"
+           target="_blank" rel="noopener"
+           style="display:inline-flex;align-items:center;gap:0.5rem;background:var(--white);color:var(--text-dark);font-weight:700;font-size:0.85rem;padding:0.6rem 1.2rem;border-radius:50px;border:2px solid var(--sage);margin-top:0.5rem;transition:all 0.2s;text-decoration:none;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#7BB89A"><use href="#ico-pin"/></svg>
+          Lihat di Google Maps
+        </a>
+      </div>
+
+      <div class="location-details reveal-right">
+        <div class="loc-card">
+          <svg class="loc-card-icon" viewBox="0 0 24 24" fill="#7BB89A"><use href="#ico-home"/></svg>
+          <div>
+            <div class="loc-info-title">Home Visit</div>
+            <div class="loc-info-text">Miss Ayu datang langsung ke rumah Anda. Tidak perlu repot antar-jemput anak — belajar nyaman di lingkungan yang sudah dikenal si kecil.</div>
+          </div>
+        </div>
+        <div class="loc-card">
+          <svg class="loc-card-icon" viewBox="0 0 24 24" fill="#7BB89A"><use href="#ico-pin"/></svg>
+          <div>
+            <div class="loc-info-title">Area Utama</div>
+            <div class="loc-info-text">Cilincing, Jakarta Utara &amp; sekitarnya. Untuk area di luar jangkauan, harap konfirmasi terlebih dahulu.</div>
+          </div>
+        </div>
+        <div class="loc-card">
+          <svg class="loc-card-icon" viewBox="0 0 24 24" fill="#7BB89A"><use href="#ico-clock"/></svg>
+          <div>
+            <div class="loc-info-title">Jadwal Fleksibel</div>
+            <div class="loc-info-text">Jadwal belajar disesuaikan dengan kebutuhan dan kesibukan keluarga Anda. Diskusikan langsung dengan Miss Ayu!</div>
+          </div>
+        </div>
+        <div class="loc-card">
+          <svg class="loc-card-icon" viewBox="0 0 24 24" fill="#7BB89A"><use href="#ico-chat"/></svg>
+          <div>
+            <div class="loc-info-title">Konsultasi Gratis</div>
+            <div class="loc-info-text">Tidak yakin apakah cocok? Hubungi Miss Ayu untuk konsultasi awal secara gratis dan tanpa paksaan.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     CONTACT
+============================= -->
+<section id="contact" aria-label="Hubungi Miss Ayu">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-label" style="margin:0 auto 0.75rem;display:table;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#E8749F"><use href="#ico-email"/></svg>
+        Hubungi Miss Ayu
+      </div>
+      <h2 class="section-title">Yuk, Mulai Perjalanan<br>Belajar Si Kecil!</h2>
+      <p class="section-subtitle" style="margin:0 auto;">
+        Punya pertanyaan? Ingin tahu lebih banyak? Langsung hubungi Miss Ayu — tidak ada pertanyaan yang terlalu kecil.
+      </p>
+    </div>
+
+    <div class="contact-card reveal">
+      <div class="contact-card-inner">
+        <div class="contact-title">Hubungi Miss Ayu</div>
+        <p class="contact-sub">
+          Tersedia via WhatsApp untuk konsultasi, tanya-tanya, dan pendaftaran. Biasanya Miss Ayu membalas dalam waktu singkat!
+        </p>
+
+        <div class="contact-methods">
+          <a href="https://wa.me/6282112590454?text=Halo%20Miss%20Ayu%2C%20saya%20ingin%20bertanya%20tentang%20les%20privat%20untuk%20anak%20saya.%20Apakah%20tersedia%3F"
+             id="contact-wa-btn"
+             class="contact-method wa"
+             target="_blank" rel="noopener"
+             aria-label="Chat WhatsApp 082112590454">
+            <svg class="cm-icon" viewBox="0 0 24 24" fill="white"><use href="#ico-wa"/></svg>
+            <div class="cm-info">
+              <div class="cm-label">WhatsApp</div>
+              <div class="cm-value">0821 1259 0454</div>
+            </div>
+          </a>
+
+          <a href="mailto:Ayuchristina23@gmail.com"
+             id="contact-email-btn"
+             class="contact-method email"
+             aria-label="Email Ayuchristina23@gmail.com">
+            <svg class="cm-icon" viewBox="0 0 24 24" fill="#E8749F"><use href="#ico-email"/></svg>
+            <div class="cm-info">
+              <div class="cm-label">Email</div>
+              <div class="cm-value">Ayuchristina23@gmail.com</div>
+            </div>
+          </a>
+        </div>
+
+        <p class="contact-footer">
+          Jam operasional: Senin – Sabtu, 08.00 – 20.00 WIB<br>
+          Melayani area Jakarta Utara (Cilincing &amp; sekitarnya)<br>
+          <strong>Home visit tersedia &middot; Jadwal fleksibel &middot; Konsultasi gratis</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================
+     FOOTER
+============================= -->
+<footer aria-label="Footer Little Steps by Miss Ayu">
+  <div class="footer-brand">Little Steps by Miss Ayu</div>
+  <p class="footer-tagline">"Helping little learners grow, one step at a time."</p>
+  <div class="footer-links">
+    <a href="#about">Tentang Saya</a>
+    <a href="#experience">Pengalaman</a>
+    <a href="#subjects">Program Belajar</a>
+    <a href="#gallery">Galeri</a>
+    <a href="#testimonials">Testimoni</a>
+    <a href="#contact">Kontak</a>
+  </div>
+  <p class="footer-copy">
+    &copy; 2025 Little Steps by Miss Ayu Khristina &middot; Jakarta Utara<br>
+    Made with love for little learners everywhere
+  </p>
+</footer>
+
+<!-- WhatsApp FAB -->
+<a href="https://wa.me/6282112590454?text=Halo%20Miss%20Ayu%2C%20saya%20tertarik%20dengan%20les%20privat%20untuk%20anak%20saya!"
+   id="wa-fab"
+   class="wa-fab"
+   target="_blank" rel="noopener"
+   aria-label="Chat WhatsApp Miss Ayu">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><use href="#ico-wa"/></svg>
+</a>
+
+<!-- ============================
+     SCRIPTS
+============================= -->
+<script>
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  revealEls.forEach(el => revealObserver.observe(el));
+
+  // Nav shrink on scroll
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      nav.style.padding = '0.5rem 1.5rem';
+      nav.style.boxShadow = '0 4px 24px rgba(232,116,159,0.12)';
+    } else {
+      nav.style.padding = '0.75rem 1.5rem';
+      nav.style.boxShadow = 'none';
+    }
+  }, { passive: true });
+
+  // Active nav link
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a:not(.nav-wa)');
+  const activeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        navLinks.forEach(link => {
+          const active = link.getAttribute('href') === `#${id}`;
+          link.style.background = active ? 'var(--pink-light)' : '';
+          link.style.color = active ? 'var(--pink-deep)' : '';
+        });
+      }
+    });
+  }, { threshold: 0.4 });
+  sections.forEach(s => activeObserver.observe(s));
+
+  // Lightbox
+  const lightbox    = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+
+  function openLightbox(item) {
+    const img = item.querySelector('img');
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox(e) {
+    if (!e || e.target === lightbox || e.currentTarget.id === 'lightbox-close-btn') {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+
+  // Gallery toggle — Lihat Selengkapnya / Sembunyikan
+  function toggleGallery() {
+    const more    = document.getElementById('gallery-more');
+    const btn     = document.getElementById('gallery-toggle-btn');
+    const text    = document.getElementById('gallery-toggle-text');
+    const badge   = btn.querySelector('.gallery-count-badge');
+    const isOpen  = more.classList.contains('expanded');
+
+    if (isOpen) {
+      more.classList.remove('expanded');
+      btn.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      text.textContent  = 'Lihat Semua Foto';
+      badge.textContent = '+12';
+      badge.style.display = '';
+      // Smooth scroll back to gallery top
+      setTimeout(() => {
+        document.getElementById('gallery').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 120);
+    } else {
+      more.classList.add('expanded');
+      btn.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+      text.textContent    = 'Sembunyikan';
+      badge.style.display = 'none';
+    }
+  }
+</script>
+
+</body>
+</html>
